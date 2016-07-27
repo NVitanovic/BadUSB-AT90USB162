@@ -1,0 +1,49 @@
+/*
+ * USBHIDTest.c
+ *
+ * Created: 2016-04-12 02:31:16
+ * Author : x-tea
+ */ 
+//http://fab.cba.mit.edu/classes/863.14/people/andrew_mao/week11/
+//ovo sto je kod njega u makefile definisano se dodaje u Project -> Toolchain -> AVR/GNU C Compiler -> Symbols
+//npr  F_CPU=8000000
+//tek tada moze da se kompajluje projekat
+#include <avr/io.h>
+#include "Keyboard.h"
+
+/** Buffer to hold the previously generated Keyboard HID report, for comparison purposes inside the HID class driver. */
+static uint8_t PrevKeyboardHIDReportBuffer[sizeof(USB_KeyboardReport_Data_t)];
+
+/** LUFA HID Class driver interface configuration and state information. This structure is
+ *  passed to all HID Class driver functions, so that multiple instances of the same class
+ *  within a device can be differentiated from one another.
+ */
+USB_ClassInfo_HID_Device_t Keyboard_HID_Interface =
+	{
+		.Config =
+			{
+				.InterfaceNumber              = INTERFACE_ID_Keyboard,
+				.ReportINEndpoint             =
+					{
+						.Address              = KEYBOARD_EPADDR,
+						.Size                 = KEYBOARD_EPSIZE,
+						.Banks                = 1,
+					},
+				.PrevReportINBuffer           = PrevKeyboardHIDReportBuffer,
+				.PrevReportINBufferSize       = sizeof(PrevKeyboardHIDReportBuffer),
+			},
+	};
+
+
+
+int main(void)
+{
+	USB_Init()
+	GlobalInterruptEnable();
+    while (1) 
+    {
+		HID_Device_USBTask(&Keybaord_HID_Interface);
+		USB_USBTask();
+    }
+}
+

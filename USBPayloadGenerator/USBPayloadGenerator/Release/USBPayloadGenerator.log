@@ -1,0 +1,7 @@
+﻿  main.cpp
+main.cpp(86): warning C4018: '<': signed/unsigned mismatch
+  Generating code
+  All 247 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  USBPayloadGenerator.vcxproj -> C:\Users\Vita\Desktop\at90usb162-hid\USBPayloadGenerator\Release\USBPayloadGenerator.exe
+  USBPayloadGenerator.vcxproj -> C:\Users\Vita\Desktop\at90usb162-hid\USBPayloadGenerator\Release\USBPayloadGenerator.pdb (Full PDB)

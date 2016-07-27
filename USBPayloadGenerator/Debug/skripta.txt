@@ -1,0 +1,3 @@
+REM asd
+GUI r
+TEST s

@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\vita\desktop\at90usb162-hid\usbpayloadgenerator\usbpayloadgenerator\main.cpp(86): warning C4018: '<': signed/unsigned mismatch
+  USBPayloadGenerator.vcxproj -> C:\Users\Vita\Desktop\at90usb162-hid\USBPayloadGenerator\Debug\USBPayloadGenerator.exe
+  USBPayloadGenerator.vcxproj -> C:\Users\Vita\Desktop\at90usb162-hid\USBPayloadGenerator\Debug\USBPayloadGenerator.pdb (Partial PDB)

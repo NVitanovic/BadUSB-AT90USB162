@@ -1,0 +1,9 @@
+REM Skrtipta koja pokrece restart racunara
+DELAY 10
+GUI r
+DELAY 2
+STRING shutdown -r -t 60
+DELAY 2
+ENTER
+DELAY 1
+ENTER

@@ -1,0 +1,12 @@
+REM asd
+DELAY 10
+STRING notepad
+DELAY 2
+ENTER
+STRING ovo je bas cool skripta
+ENTER
+STRING novi red se pise ovde
+ENTER 
+STRING hue hue hue
+ENTER
+ENTER
